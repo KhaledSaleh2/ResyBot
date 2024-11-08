@@ -27,10 +27,6 @@ def find_availability(restaurant_name, venue_id, party_size, day, early_time, la
         print("Attempt number: " +str(attempt_num))
         response = requests.get(url, params=params, headers=headers)
         response.raise_for_status()  # Check for any error in the response
-        # If the request is successful, you can handle the response data here
-        # For example:
-        # response_data = response.json()
-        # print(response_data)
 
         data = response.json()
 
