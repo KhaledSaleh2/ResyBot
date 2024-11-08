@@ -7,7 +7,7 @@ The script works by taking in input from the user, such as their resy.com userna
 The script then uses this information to repeatedly check every 5 minutes if a reservation opens that matches the inputted parameters. If yes, it books said reservation.
 Users must have a resy.com account, as well as a form of payment listed on their account, in order for the script to work.
 
-The script uses the parameters to send different network calls to the Resy APIs. The script uses 4 different API network calls: login, availability, book, and 
+The script uses the parameters to send different network calls to the Resy APIs. The script uses 4 different API network calls: login, availability, details, and book. Each of these are reflected in their respective file.
 
 # DISCLAIMER
 The script has suddenly stopped working as of December 2023. I am not sure as to why it suddenly stopped working (maybe resy is cracking down on these types of things), and have been unable to work around it.
