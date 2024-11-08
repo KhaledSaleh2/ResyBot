@@ -4,10 +4,9 @@ import requests
 
 def book_reservation():
 
-    # payment_id = login.login()
-    # if payment_id == "fail":
-    #    return
-    payment_id = '{"id":18665449}'
+    payment_id = login.login()
+    if payment_id == "fail":
+        return
     book_token = details.find_book_token()
     if book_token == "fail":
         return
