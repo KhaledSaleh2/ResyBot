@@ -1,14 +1,34 @@
 # ResyBot
-ResyBot is a script that can be ran to automatically book a restaurant (specifically in New York) reservations on Resy.com as they open up. 
-The script uses a dictionary of some of the hardest to obtain reservations in New York, and thus can only work for one of the listed restaurants (see id_library.py).
 
-# How it works:
-The script works by taking in input from the user, such as their resy.com username and password, desired restaurant, party size, time preference, etc. 
-The script then uses this information to repeatedly check every 5 minutes if a reservation opens that matches the inputted parameters. If yes, it books said reservation.
-Users must have a resy.com account, as well as a form of payment listed on their account, in order for the script to work.
+**ResyBot** is a Python script designed to automatically book restaurant reservations on Resy.com, specifically for high-demand restaurants in New York. The script relies on a dictionary of some of the hardest-to-obtain reservations (see `id_library.py`), so it can only work with these predefined restaurants.
 
-The script uses the parameters to send different network calls to the Resy APIs. The script uses 4 different API network calls: login, availability, details, and book. Each of these are reflected in their respective file.
+## How It Works
+1. **User Input**:  
+   The script collects the following details from the user:
+   - Resy.com username and password
+   - Desired restaurant
+   - Party size
+   - Time preference  
 
-# DISCLAIMER
-The script has suddenly stopped working as of December 2023. I am not sure as to why it suddenly stopped working (maybe resy is cracking down on these types of things), and have been unable to work around it.
-Feel free to investigate why the script no longer works, and potentially find a way around it.
+2. **Reservation Search**:  
+   Using this information, the script checks every 5 minutes to see if a reservation that matches the user's criteria becomes available.  
+
+3. **Booking**:  
+   If a reservation opens up, the script automatically books it.  
+   **Note**: A valid Resy.com account and a payment method linked to the account are required for the script to function.
+
+4. **API Calls**:  
+   The script interacts with Resy's APIs using four types of network calls:  
+   - `login`: Authenticates the user  
+   - `availability`: Checks for open reservations  
+   - `details`: Retrieves specific reservation details  
+   - `book`: Books the reservation  
+
+   Each API call is implemented in its respective file within the script.
+
+## DISCLAIMER
+As of December 2023, the script is no longer functional.  
+
+The exact cause is unknown, but it is possible that Resy has implemented measures to block scripts like this. I have been unable to identify a workaround.  
+
+If you are interested, feel free to investigate the issue and explore potential solutions.
